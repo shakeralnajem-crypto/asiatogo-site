@@ -610,13 +610,27 @@
       .sauce {
         border: 1px solid var(--line);
         border-radius: 18px;
-        padding: 26px 22px;
+        padding: 0;
         background: rgba(18, 17, 16, 0.7);
         position: relative;
         overflow: hidden;
         transition:
           transform 0.3s,
           box-shadow 0.3s;
+      }
+      .sauce-img {
+        width: 100%;
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+        display: block;
+        border-radius: 18px 18px 0 0;
+        transition: transform 0.4s ease;
+      }
+      .sauce:hover .sauce-img {
+        transform: scale(1.04);
+      }
+      .sauce-body {
+        padding: 22px 22px 22px;
       }
       .sauce::before {
         content: '';
@@ -1416,40 +1430,44 @@
         </div>
         <div class="sauce-grid">
           <div class="sauce reveal" style="--sc: var(--bangkok)">
-            <div class="num">01</div>
-            <h3>Bangkok Heat</h3>
-            <div class="traits">Spicy · Bold · Addictive</div>
-            <p class="blurb">
-              Thai-style chili kick that builds with every bite.
-            </p>
-            <div class="bar"></div>
+            <img class="sauce-img" src="/images/bangkok-heat.png" alt="Bangkok Heat" loading="lazy" />
+            <div class="sauce-body">
+              <div class="num">01</div>
+              <h3>Bangkok Heat</h3>
+              <div class="traits">Spicy · Bold · Addictive</div>
+              <p class="blurb">Thai-style chili kick that builds with every bite.</p>
+              <div class="bar"></div>
+            </div>
           </div>
           <div class="sauce reveal" style="--sc: var(--tokyo)">
-            <div class="num">02</div>
-            <h3>Tokyo Fire</h3>
-            <div class="traits">Spicy · Garlicky · Umami</div>
-            <p class="blurb">
-              Deep umami layered with roasted garlic and a clean Japanese burn.
-            </p>
-            <div class="bar"></div>
+            <img class="sauce-img" src="/images/tokyo-fire.png" alt="Tokyo Fire" loading="lazy" />
+            <div class="sauce-body">
+              <div class="num">02</div>
+              <h3>Tokyo Fire</h3>
+              <div class="traits">Spicy · Garlicky · Umami</div>
+              <p class="blurb">Deep umami layered with roasted garlic and a clean Japanese burn.</p>
+              <div class="bar"></div>
+            </div>
           </div>
           <div class="sauce reveal" style="--sc: var(--shanghai)">
-            <div class="num">03</div>
-            <h3>Shanghai Black Gold</h3>
-            <div class="traits">Rich · Savory · Garlic</div>
-            <p class="blurb">
-              Glossy black-garlic richness — savory, smooth, unforgettable.
-            </p>
-            <div class="bar"></div>
+            <img class="sauce-img" src="/images/shanghai-black-gold.png" alt="Shanghai Black Gold" loading="lazy" />
+            <div class="sauce-body">
+              <div class="num">03</div>
+              <h3>Shanghai Black Gold</h3>
+              <div class="traits">Rich · Savory · Garlic</div>
+              <p class="blurb">Glossy black-garlic richness — savory, smooth, unforgettable.</p>
+              <div class="bar"></div>
+            </div>
           </div>
           <div class="sauce reveal" style="--sc: var(--seoul)">
-            <div class="num">04</div>
-            <h3>Seoul Satay</h3>
-            <div class="traits">Creamy · Nutty · Smoky</div>
-            <p class="blurb">
-              Korean-peanut satay — creamy, smoky and crave-worthy.
-            </p>
-            <div class="bar"></div>
+            <img class="sauce-img" src="/images/shanghai-black-gold.png" alt="Seoul Satay" loading="lazy" />
+            <div class="sauce-body">
+              <div class="num">04</div>
+              <h3>Seoul Satay</h3>
+              <div class="traits">Creamy · Nutty · Smoky</div>
+              <p class="blurb">Korean-peanut satay — creamy, smoky and crave-worthy.</p>
+              <div class="bar"></div>
+            </div>
           </div>
         </div>
       </div>
