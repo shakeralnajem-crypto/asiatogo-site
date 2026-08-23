@@ -682,6 +682,74 @@
         margin-top: 16px;
       }
 
+      /* SKEWER GALLERY */
+      .dish-grid {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 18px;
+      }
+      @media (max-width: 900px) {
+        .dish-grid {
+          grid-template-columns: repeat(3, 1fr);
+        }
+      }
+      @media (max-width: 560px) {
+        .dish-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+      .dish {
+        border: 1px solid var(--line);
+        border-radius: 16px;
+        background: rgba(18, 17, 16, 0.7);
+        overflow: hidden;
+        position: relative;
+        transition:
+          transform 0.3s,
+          box-shadow 0.3s;
+      }
+      .dish:hover {
+        transform: translateY(-6px);
+      }
+      .dish-img {
+        width: 100%;
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+        display: block;
+        transition: transform 0.4s ease;
+      }
+      .dish:hover .dish-img {
+        transform: scale(1.05);
+      }
+      .dish-price {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background: var(--gold);
+        color: #17150f;
+        font-family: 'Anton';
+        font-size: 0.8rem;
+        letter-spacing: 0.5px;
+        padding: 4px 9px;
+        border-radius: 999px;
+      }
+      .dish-body {
+        padding: 12px 14px 16px;
+      }
+      .dish h4 {
+        font-family: 'Anton';
+        font-size: 0.95rem;
+        color: #fff;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+        margin: 0;
+      }
+      .dish p {
+        color: var(--muted);
+        font-size: 0.78rem;
+        margin-top: 4px;
+      }
+
       /* MENU */
       #menu {
         background: linear-gradient(
@@ -1247,6 +1315,7 @@
       <div class="nav-links" id="navLinks">
         <a href="#build">Build Your Cup</a>
         <a href="#sauces">Sauces</a>
+        <a href="#skewers">Skewers</a>
         <a href="#menu">Menu</a>
         <a href="#rewards">Rewards</a>
         <a href="#find">Find Us</a>
@@ -1468,6 +1537,82 @@
               <p class="blurb">Korean-peanut satay — creamy, smoky and crave-worthy.</p>
               <div class="bar"></div>
             </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKEWERS GALLERY -->
+    <section id="skewers">
+      <div class="wrap">
+        <div class="sec-head reveal">
+          <div class="sec-kicker">Stack Your Cup</div>
+          <h2 class="sec-title">The <span>Skewers</span></h2>
+          <p class="sec-desc">
+            Fifteen boiled-to-order skewers, 2 AED each — pick as many as you crave.
+          </p>
+        </div>
+        <div class="dish-grid">
+          <div class="dish reveal">
+            <img class="dish-img" src="/images/shrimp-sticks.jpg" alt="Shrimp Sticks" loading="lazy" />
+            <div class="dish-body"><h4>Shrimp Sticks</h4><p>Silky shrimp paste, skewered</p></div>
+          </div>
+          <div class="dish reveal">
+            <img class="dish-img" src="/images/crab-roe-dumplings.jpg" alt="Crab Roe Dumplings" loading="lazy" />
+            <div class="dish-body"><h4>Crab Roe Dumplings</h4><p>Glossy dumplings, golden roe center</p></div>
+          </div>
+          <div class="dish reveal">
+            <img class="dish-img" src="/images/enoki-mushroom.jpg" alt="Enoki Mushroom" loading="lazy" />
+            <div class="dish-body"><h4>Enoki Mushroom</h4><p>Glazed and sesame-dusted</p></div>
+          </div>
+          <div class="dish reveal">
+            <img class="dish-img" src="/images/chicken-meatballs.jpg" alt="Chicken Meatballs" loading="lazy" />
+            <div class="dish-body"><h4>Chicken Meatballs</h4><p>Sticky-glazed, skewered</p></div>
+          </div>
+          <div class="dish reveal">
+            <img class="dish-img" src="/images/grilled-beef-balls.jpg" alt="Grilled Beef Balls" loading="lazy" />
+            <div class="dish-body"><h4>Grilled Beef Balls</h4><p>Charred, juicy, herb-flecked</p></div>
+          </div>
+          <div class="dish reveal">
+            <img class="dish-img" src="/images/fish-roll-skewers.jpg" alt="Fish Roll Skewers" loading="lazy" />
+            <div class="dish-body"><h4>Fish Roll Skewers</h4><p>Savory filling, glazed shell</p></div>
+          </div>
+          <div class="dish reveal">
+            <img class="dish-img" src="/images/tofu-skewers.jpg" alt="Tofu Skewers" loading="lazy" />
+            <div class="dish-body"><h4>Tofu Skewers</h4><p>Grilled firm, sesame-topped</p></div>
+          </div>
+          <div class="dish reveal">
+            <img class="dish-img" src="/images/black-fungus-mushroom.jpg" alt="Black Fungus Mushroom" loading="lazy" />
+            <div class="dish-body"><h4>Black Fungus Mushroom</h4><p>Glossy, savory, skewered</p></div>
+          </div>
+          <div class="dish reveal">
+            <img class="dish-img" src="/images/lobster-balls.jpg" alt="Lobster Balls" loading="lazy" />
+            <div class="dish-body"><h4>Lobster Balls</h4><p>Creamy seafood bites</p></div>
+          </div>
+          <div class="dish reveal">
+            <img class="dish-img" src="/images/fish-cake-rolls.jpg" alt="Fish Cake Rolls" loading="lazy" />
+            <div class="dish-body"><h4>Fish Cake Rolls</h4><p>Sliced, spiced, scallion-topped</p></div>
+          </div>
+          <div class="dish reveal">
+            <img class="dish-img" src="/images/seaweed-rolls.jpg" alt="Seaweed Rolls" loading="lazy" />
+            <div class="dish-body"><h4>Seaweed Rolls</h4><p>Glazed kelp, sesame-flecked</p></div>
+          </div>
+          <div class="dish reveal">
+            <img class="dish-img" src="/images/grilled-shrimp.jpg" alt="Grilled Shrimp" loading="lazy" />
+            <div class="dish-price">3 AED</div>
+            <div class="dish-body"><h4>Grilled Shrimp</h4><p>Peppered, char-grilled</p></div>
+          </div>
+          <div class="dish reveal">
+            <img class="dish-img" src="/images/shrimp-skewers.jpg" alt="Shrimp Skewers" loading="lazy" />
+            <div class="dish-body"><h4>Shrimp Skewers</h4><p>Fresh, garlicky, lightly seasoned</p></div>
+          </div>
+          <div class="dish reveal">
+            <img class="dish-img" src="/images/shrimp-balls.jpg" alt="Shrimp Balls" loading="lazy" />
+            <div class="dish-body"><h4>Shrimp Balls</h4><p>Sticky-glazed, skewered</p></div>
+          </div>
+          <div class="dish reveal">
+            <img class="dish-img" src="/images/bok-choy.jpg" alt="Bok Choy" loading="lazy" />
+            <div class="dish-body"><h4>Bok Choy</h4><p>Fresh, crisp, boiled to order</p></div>
           </div>
         </div>
       </div>
